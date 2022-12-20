@@ -1,4 +1,7 @@
 @use '../utilities' as *;
+.wrapper {
+  position: relative;
+}
 
 .card {
   display: flex;
@@ -60,8 +63,7 @@
       background-color: var(--dark-blue);
       cursor: pointer;
       border-radius: 50%;
-      transition: all 0.2s ease-in;
-      z-index: 200;
+      z-index: 20;
 
       &:hover,
       &:focus {
@@ -106,7 +108,6 @@
       background-color: var(--primary-color);
       color: var(--white);
       cursor: pointer;
-      transition: all 0.2s ease-in;
 
       &:hover,
       &:focus {
@@ -117,6 +118,12 @@
   }
 
   &__thanks {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    width: 100%;
     display: none;
     text-align: center;
 
@@ -138,6 +145,30 @@
   }
 
   @include breakpoint-up(small) {
+    justify-content: space-evenly;
+    padding: rem(30);
     min-height: rem(415);
+
+    & .rating {
+      &__label {
+        width: rem(52);
+        height: rem(52);
+      }
+    }
+
+    &__thanks {
+      & img {
+        width: rem(168);
+        margin-bottom: rem(40);
+      }
+    }
   }
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.active {
+  display: block;
 }

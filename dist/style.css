@@ -58,6 +58,10 @@ fieldset {
   padding: 0;
 }
 
+.wrapper {
+  position: relative;
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -115,8 +119,7 @@ fieldset {
   background-color: var(--dark-blue);
   cursor: pointer;
   border-radius: 50%;
-  transition: all 0.2s ease-in;
-  z-index: 200;
+  z-index: 20;
 }
 .card .rating__label:hover, .card .rating__label:focus {
   background-color: var(--primary-color);
@@ -156,13 +159,18 @@ fieldset {
   background-color: var(--primary-color);
   color: var(--white);
   cursor: pointer;
-  transition: all 0.2s ease-in;
 }
 .card .rating__btn:hover, .card .rating__btn:focus {
   background-color: var(--white);
   color: var(--primary-color);
 }
 .card__thanks {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 100%;
   display: none;
   text-align: center;
 }
@@ -182,6 +190,24 @@ fieldset {
 }
 @media (min-width: 25rem) {
   .card {
+    justify-content: space-evenly;
+    padding: 1.875rem;
     min-height: 25.9375rem;
   }
+  .card .rating__label {
+    width: 3.25rem;
+    height: 3.25rem;
+  }
+  .card__thanks img {
+    width: 10.5rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.active {
+  display: block;
 }/*# sourceMappingURL=style.css.map */
