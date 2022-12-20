@@ -1,9 +1,0 @@
-1). when we checked the radio button and submit it (?)
-    - how can i see the value ?
-    - how to display the value ? 
-
-2). when submit is clicked (?)
-    - how to flip the card and display the "thanks card" ? 
-
-
-
