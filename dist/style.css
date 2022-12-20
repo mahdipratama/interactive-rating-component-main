@@ -194,6 +194,13 @@ fieldset {
     padding: 1.875rem;
     min-height: 25.9375rem;
   }
+  .card__icon {
+    width: 3.25rem;
+    height: 3.25rem;
+  }
+  .card h2 {
+    font-size: 1.5625rem;
+  }
   .card .rating__label {
     width: 3.25rem;
     height: 3.25rem;
